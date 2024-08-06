@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+main {
+  font-family: "Roboto", Arial, sans-serif;
+  /* margin-top: 100vh; */
+  /* border: 3px solid green; */
+  width: 100%;
+  background-image: linear-gradient(
+    rgb(104, 74, 114),
+    rgb(114, 84, 94),
+    rgb(124, 94, 84),
+    rgb(134, 104, 74)
+  );
+  display: grid;
+  grid-template-rows: 1fr;
+}
+main > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Style for heading */
+.right > h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.right > p {
+  line-height: 1.5;
+  text-align: left;
+  /* width: 80%; */
+  margin: 0 auto;
+  color: white;
+}
+.left > img {
+  filter: blur(0.1px);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid gray;
+  border-radius: 20%;
+  margin-top: 20px;
+  /* max-width: 50%; */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for image */
+.left > img:hover {
+  transform: scale(1.1);
+}
+
+/* Animation for heading */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.right h1 {
+  animation: fadeInUp 1s ease;
+}
+
+/* Animation for paragraph */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.right p {
+  animation: fadeIn 1s ease;
+}
+
+/* styles moved from the intro part */
+
+.intro-content {
+  font-size: 32px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin-top: 180px;
+  /* margin-bottom: 180px; */
+  color: white;
+  /* border: 1px solid rgb(255, 31, 31); */
+}
+@media only screen and(min-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .right > p {
+    font-size: 12px;
+  }
+  .riight > h1 {
+    font-size: 24px;
+  }
+
+  .intro-content {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    margin-top: 120px; /* Adjust margin top */
+  }
+  .intro-content-container {
+    height: 80vh;
+  }
+  .intro-text,
+  .intro-image {
+    margin-bottom: 10px;
+  }
+
+  .header-title {
+    margin: 8px 0;
+    background: linear-gradient(
+      90deg,
+      rgb(221, 222, 224),
+      rgb(202, 110, 200),
+      rgb(243, 111, 111),
+      rgb(113, 81, 81),
+      rgb(208, 161, 74),
+      rgb(168, 206, 19)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    white-space: nowrap;
+    color: transparent;
+  }
+}
+.header-title {
+  background: linear-gradient(
+    90deg,
+    rgb(120, 133, 155),
+    rgb(202, 110, 200),
+    rgb(243, 111, 111),
+    rgb(113, 81, 81),
+    rgb(208, 161, 74),
+    rgb(168, 206, 19)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+  color: transparent;
+}
+
+.intro-text,
+.intro-image {
+  flex: 1;
+  margin-bottom: 85px; /* Adjust margin for smaller screens */
+}
+
+.header-subtitle {
+  text-align: left;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    rgb(170, 98, 98),
+    rgb(158, 158, 161),
+    rgb(143, 204, 179),
+    rgb(208, 161, 74),
+    rgb(202, 110, 202),
+    rgb(125, 177, 177)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* display: inline-block; */
+  white-space: nowrap;
+}
+.intro-image-container {
+  box-shadow: 2px 2px 43px rgba(215, 238, 133, 0.4);
+  display: flex;
+  border: 5px solid rgb(79, 79, 31);
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  background-image: radial-gradient(
+    circle,
+    rgba(230, 10, 10, 0.4),
+    rgba(231, 66, 66, 0.4)
+  );
+}
+.header-image {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(45, 28, 28, 0.6);
+  box-shadow: 2px 2px 5px rgba(208, 235, 4, 0.5);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.header-title {
+  margin: 12px 0;
+  /* padding-right: 82px; */
+}
+
+.intro-image {
+  flex: 1;
+  /* border: 1px solid rgb(226, 221, 221); */
+}
+
+/* typing and deleting */
+#typing-effect {
+  font-family: "Roboto", Arial, sans-serif;
+  overflow: hidden; /* Ensure text doesn't overflow the container */
+  white-space: nowrap; /* Prevent line breaks */
+  border-right: 2px solid black; /* Simulate the cursor */
+  animation: typing 2s steps(180, end),
+    /* Typing animation */ blink-caret 0.75s infinite alternate; /* Blinking cursor */
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* media query for screen larger than tablet */
+@media only screen and (min-width: 769px) {
+  .intro-content {
+    max-width: 1000px;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    margin-bottom: 0;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 94%;
+    border-radius: 80px;
+    box-shadow: 1px 1px 50px rgba(255, 0, 217, 0.7);
+  }
+  main > div {
+    background: rgb(177, 133, 133);
+    width: 94%;
+    /* border: 2px solid rgba(231, 120, 120, 0.8); */
+    display: flex;
+    column-gap: 12px;
+    flex-direction: row;
+    margin: 100px auto;
+    padding: 20px 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    border-radius: 17px;
+  }
+  main > div > div > h1 {
+    font-size: 30px;
+  }
+  main > div > div > p {
+    font-size: 18px;
+  }
+
+  .intro-image-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    overflow: hidden;
+  }
+  .header-image {
+    width: 230px;
+    height: 230px;
+    border-radius: 115px;
+    transition: width 0.5s, height 0.5s;
+  }
+  .header-image:hover {
+    width: 241px;
+    height: 250px;
+  }
+  .header-title {
+    text-align: left;
+    margin-left: 22px;
+  }
+  .left {
+    width: 80%;
+    flex:1;
+    /* border: 2px solid rgb(255, 0, 76); */
+  }
+  .left > img {
+    width: 65%;
+    border: 2px solid rgb(201, 229, 185);
+    }
+    .about-img {
+     width: 10%;
+    }
+
+  .right {
+    background: rgb(177, 133, 133);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 90%;
+    flex:1;
+    /* border: 1px solid rgb(19, 18, 28); */
+    transition: transform 0.5s ease;
+  }
+  .right:hover {
+    transform: scale(1.1);
+  }
+  
+}
