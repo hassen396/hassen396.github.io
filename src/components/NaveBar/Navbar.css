@@ -1,0 +1,30 @@
+/* Navbar.css */
+
+.navbar-wrapper {
+  /* border-bottom: 2px solid #bcbcbc; */
+  backdrop-filter: blur(100px);
+  background-color: transparent;
+}
+
+.nav-pill {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.2);
+}
+
+.pill-dark {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.pill-light {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-center {
+  border: 1px solid transparent;
+}
+
+.nav-center .nav-link {
+  color: inherit !important;
+}

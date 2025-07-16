@@ -1,0 +1,4 @@
+title: "Personal Portfolio"
+description: "a personal portfolio site"
+# source: .      # Uncomment if your site is in the root directory
+theme: jekyll-theme-primer
